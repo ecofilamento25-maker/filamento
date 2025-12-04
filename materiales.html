@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://kit.fontawesome.com/03a89292db.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/materiales_css.css">
+
+    <title>Filamento</title>
+</head>
+
+<body>
+
+<!-- ⬇⬇⬇ TU CÓDIGO ORIGINAL ENVUELTO SEMÁNTICAMENTE ⬇⬇⬇ -->
+
+<header class="header"> 
+    <!-- TU HEADER ORIGINAL SIN CAMBIOS -->
+    <div class="menu container">
+        <a href="#" class="logo">Logo</a>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="html.html">Inicio</a></li>
+                <li><a href="materiales.html">Materiales</a></li>
+                <li><a href="precauciones_html.html">Precauciones</a></li>
+                <li><a href="quienes_somos.html">¿Quienes Somos?</a></li>
+                <li><a href="compra.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="header-content container">
+        <h1 class="desplazamiento">Proyecto Filamento</h1>
+        <p>
+            Los materiales utilizados en este proyecto son elementos fundamentales que permiten llevar a cabo todas las fases de la construcción y ejecución.
+        </p>
+    </div>
+</header>
+
+<main>
+
+<section>
+    <div class="Materiales">
+        <div class="mate">
+            <h2><a href="#" class="underline">Materiales Principales</a></h2>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="materials">
+
+        <!-- NO CAMBIÉ NADA DE ESTO -->
+        <div class="material-card">
+            <img src="imagenes/componentes/motor.jpeg" alt="Motor">
+            <h3>Motor de corriente discontinua</h3>
+            <p>Tiene el objetivo de girar los engranajes que ayudan a almacenar la tira de filamento.</p>
+        </div>
+
+        <div class="material-card">
+            <img src="imagenes/componentes/arduino.jpeg" alt="Arduino">
+            <h3>Arduino</h3>
+            <p>Cumple la función de conectar y programar los demás componentes electrónicos...</p>
+        </div>
+
+        <div class="material-card">
+            <img src="imagenes/componentes/fuente.jpeg" alt="Fuente">
+            <h3>Fuente de alimentación</h3>
+            <p>Están conectadas en paralelo para que den 24 V y 12 V.</p>
+        </div>
+
+        <div class="material-card">
+            <img src="imagenes/componentes/pantallalcdi2.jpeg" alt="Pantalla LCD I2C">
+            <h3>Pantalla LCD I2C</h3>
+            <p>Es un dispositivo que nos permite mostrar información en pantalla...</p>
+        </div>
+
+        <div class="material-card">
+            <img src="imagenes/componentes/rele.jpeg" alt="Rele">
+            <h3>Relé</h3>
+            <p>Funciona para el control de la resistencia del extrusor...</p>
+        </div>
+
+        <div class="material-card">
+            <img src="imagenes/componentes/boca.jpeg" alt="Boca">
+            <h3>Boca de extrusor</h3>
+            <p>Se encarga de moldear la tira de botella...</p>
+        </div>
+
+        <div class="material-card">
+            <img src="imagenes/componentes/engranaje.jpeg" alt="Engranajes">
+            <h3>Engranajes</h3>
+            <p>Son responsables de almacenar y ayudar al motor...</p>
+        </div>
+
+        <div class="material-card">
+            <img src="imagenes/componentes/puente.jpeg" alt="Puente H">
+            <h3>Puente H</h3>
+            <p>Nos permite programar la velocidad y giro del motor paso a paso.</p>
+        </div>
+
+        <div class="material-card">
+            <img src="imagenes/componentes/bluetooth.jpeg" alt="Bluetooth">
+            <h3>Bluetooth</h3>
+            <p>Permite ver la temperatura del extrusor a tiempo real...</p>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <button class="btn-toggle" onclick="toggleSecu()">Mostrar Materiales secundarios</button>
+
+    <div id="materiales-secu" class="materiales-secu">
+
+        <div class="mate">
+            <h2><a href="#" class="underline">Materiales secundarios</a></h2>
+        </div>
+
+        <div class="materials">
+
+            <div class="material-card">
+                <img src="imagenes/componentes/cablearduino.jpeg" alt="Cable Arduino">
+                <h3>Cable para Arduino</h3>
+                <p>Crucial para programar y conectar el Arduino.</p>
+            </div>
+
+            <div class="material-card">
+                <img src="imagenes/componentes/cables hembra.jpg" alt="Cables macho-hembra">
+                <h3>Cables macho-hembra</h3>
+                <p>Fundamentales para conectar los componentes.</p>
+            </div>
+
+            <div class="material-card">
+                <img src="imagenes/componentes/termistor.jpg" alt="Termistor">
+                <h3>Termistor</h3>
+                <p>Mide la temperatura del extrusor.</p>
+            </div>
+
+            <div class="material-card">
+                <img src="imagenes/componentes/diodo.jpg" alt="Diodo">
+                <h3>Diodo</h3>
+                <p>Soldado para controlar la señal del relé.</p>
+            </div>
+
+            <div class="material-card">
+                <img src="imagenes/componentes/conector jack.jpg" alt="Conector jack">
+                <h3>Conector jack</h3>
+                <p>Sirve para conectar la fuente al Arduino.</p>
+            </div>
+
+            <div class="material-card">
+                <img src="imagenes/componentes/resistencia.jpg" alt="Resistencia">
+                <h3>Resistencia</h3>
+                <p>Controla la cantidad de corriente que pasa por ella.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- TU SCRIPT ORIGINAL -->
+<script>
+    function toggleSecu() {
+        var secu = document.getElementById("materiales-secu");
+        secu.style.display = (secu.style.display === "none" || secu.style.display === "") ? "block" : "none";
+    }
+</script>
+
+<a href="#" class="scroll-to-top" id="scrollToTop">
+    <i class="fas fa-arrow-up"></i>
+</a>
+
+<script>
+document.getElementById('scrollToTop').addEventListener('click', function(event) {
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
+
+<footer class="footer">
+    <!-- TU FOOTER ORIGINAL SIN CAMBIOS -->
+    <div class="final">
+        <div class="footer-row">
+
+            <div class="footer-links">
+                <ul>
+                    <a href="https://www.tecnica3hurlingham.com/" target="_blank">
+                        <li><img src="imagenes/componentes/logo.jpg" width="160"></li>
+                    </a>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Integrantes : 7°B</h4>
+                <ul>
+                    <li><a href="https://www.instagram.com/bri.aragundee/" target="_blank">Aragunde Brisa</a></li>
+                    <li><a href="https://www.instagram.com/_thiagoespo_/" target="_blank">Esposito Thiago</a></li>
+                    <li><a href="https://www.instagram.com/ezequ1el0/" target="_blank">Barcia Ezequiel</a></li>
+                    <li><a href="https://www.instagram.com/maytena_ailen/" target="_blank">Perez Maytena</a></li>
+                    <li><a href="https://www.instagram.com/prigramajoo/" target="_blank">Gramajo Priscila</a></li>
+                    <li><a href="https://www.instagram.com/fedebaudraco/" target="_blank">Baudraco Federico</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>¿De donde somos?</h4>
+                <ul>
+                    <li><img src="imagenes/componentes/logo.jpg" width="20"> <a href="https://maps.app.goo.gl/nEJnrosWCSJokRYB8" target="_blank">Técnica 3 Víctor Mercate</a></li>
+                    <li><img src="imagenes/logos/arg.png" width="20"> <a href="https://maps.app.goo.gl/ULZyss44ZmaCp9iR7" target="_blank">Argentina, Buenos Aires</a></li>
+                    <li><img src="imagenes/logos/googlemaps.webp" width="20"> <a href="https://maps.app.goo.gl/Jii3vsjQ7vkU4VRu6" target="_blank">Hurlingham</a></li>
+                    <li><img src="imagenes/logos/Instagram.png" width="15"> <a href="https://www.instagram.com/ecofilamento7b?igsh=bWZvN3N5bjNzZjZz" target="_blank">Ecofilamento7b</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+<!-- ⬆⬆⬆ FIN DE TU CÓDIGO ORIGINAL ENVUELTO ⬆⬆⬆ -->
+
+<!-- CSS PARA HACERLO RESPONSIVE (SIN TOCAR TU CSS EXISTENTE) -->
+<style>
+img { max-width: 100%; height: auto; }
+
+.materials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.material-card {
+    width: 300px;
+    max-width: 100%;
+}
+</style>
+
+</body>
+</html>
