@@ -1,0 +1,430 @@
+/* Reset general para asegurar una base consistente en todos los navegadores */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Esto incluye el borde en el cálculo del tamaño del elemento */
+    text-decoration: none; /* Elimina los subrayados en enlaces */
+    list-style: none; /* Elimina los estilos de lista (viñetas) */
+}
+
+body /*selector*/{
+    font-family:sans-serif; /* Establece la fuente predeterminada en toda la pag */
+}
+
+.container{
+    max-width: 1200px; /* Limita el ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+
+.header{
+    background-color: rgb(148, 197, 245);
+    min-height: 70vh; /* Asegura que la altura mínima de la sección sea el 70% de la altura de la pantalla */
+    display: flex; /* Usa Flexbox para alinear elementos */
+    align-items: center;
+}
+
+.logo{
+    color:  rgb(148, 197, 245);
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.menu{
+    position: absolute; /* Posiciona el menú de forma absoluta respecto al contenedor */
+    top: 0; left: 0; right: 0; /* Coloca el menú en la parte superior */
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; /* lleva el memu para la derecha */
+}
+
+
+
+.menu .navbar ul li{
+    float: left;
+    padding-top:50px; /* da espacio en la parte superior*/
+}
+.menu .navbar ul li a{
+    font-size: 18px; /*tamaño de la letra*/
+    padding: 20px; /*espacio entre los items*/
+    color: rgb(255, 255, 255);
+    display: block;
+    font-weight: 600; /*grosor del texto*/
+}
+
+.menu .navbar ul li a:hover{
+    color: rgb(255, 255, 255); /*al tocar el texto cambia de color*/
+}
+
+.menu-icono{
+    width: 25px; /*tamaño*/
+}
+
+
+.header-content{
+    text-align: center;
+    padding-top: 100px
+}
+
+.header-content h1{
+    font-size: 75px; /*tamaño de la letra*/
+    color: rgb(255, 255, 255);
+    text-transform: uppercase; /* Transforma el texto a mayúsculas */
+    padding-bottom: 35px; /*espacio inferior*/
+}
+
+.desplazamiento {
+font-size: 40px;
+color: rgb(148, 197, 245);
+animation: deslizar 2s ease-in-out; /* animación de desplazamiento, ease-in-out hace el desplazamiento mas lento */
+text-align: center;
+}
+
+@keyframes deslizar {
+    0% { 
+        transform: translateX(-100%); /* Mueve el elemento fuera de la pantalla hacia la izquierda */
+        
+    }
+    100% { 
+        transform: translateX(0); /* Mueve el elemento a su posición original (sin desplazamiento) */
+        
+    }
+}
+.header-content p{
+    font-size: 16px;
+    color: aliceblue;
+    padding-bottom: 25px;
+}
+
+
+
+.funci {
+margin: 100px auto 0;
+margin-top: 20px;
+padding: 30px;
+text-align: center;
+}
+
+.section h3{
+font-size: 50px;
+text-align: center;
+padding-bottom: 20px;
+}
+
+
+/*linea al tocar el titulo*/
+.underline {
+position: relative;
+color:rgb(148, 197, 245);
+
+
+}
+.underline::after {
+    content: ''; /* Agrega un pseudoelemento después del texto */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px; /* Altura de la línea */
+    background: #5c94a5; /* Color de la línea */
+    transform: scaleX(0); /* Inicialmente la línea está oculta */
+    transition: transform 0.3s ease; /* Transición suave para cuando aparece */
+}
+.underline:hover::after {
+    transform: scaleX(1); /* La línea se expande cuando se pasa el mouse */
+}
+
+
+.section {
+margin-bottom: 60px;
+padding: 50px;
+border-radius: 10px; /* Bordes redondeados */
+
+}
+
+.section p{
+font-size: 20px;
+}
+
+.section h2 {
+font-size: 40px;
+color: rgb(148, 197, 245);
+margin-bottom: 20px;
+}
+
+
+.card{
+width: 100%;
+padding: 30px;
+border: 2px solid 
+rgb(148, 197, 245);
+border-radius: 20px;
+margin-bottom: 10px;
+margin-top: 20px;
+}
+
+
+.proyecto h1{
+ font-size: 50px;
+}
+
+.img-1{
+    transition: 5s;
+    border-radius: 7px;
+    margin-top: 10px;
+   
+}
+
+.img-2{
+    width: 350; 
+}
+
+img:hover{
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen al pasar el mouse */
+    transition: 1s; /* Duración de la transición */
+}
+
+
+/*Ventajas y Desventajas*/
+.vent-desv .funci{
+    font-size: 40px;
+}
+.vent-desv .funci p{
+    font-size: 20px;
+    padding-top: 10px;
+}
+.container-form{
+display: flex;
+padding-left: 10px;
+padding-top: 0px;
+height: 500px; /*largo*/
+max-width: 900px;
+margin: 20px;
+margin-left: 190px;
+font-size: 30px;
+}
+
+
+
+.ventajas{
+width: 50%;
+display: flex;
+align-items: center;
+color: #ffffff;
+background-color: rgb(99, 153, 206); /*#0e4f94 #5376ad   */
+border-top-left-radius: 70px;
+border-bottom-left-radius: 70px;
+justify-content: center;
+padding: 20px;
+}
+
+.ventajas:hover{
+transform: scale(1.1);
+transition: 2s;
+
+}
+.vent{
+padding: 0 5px;
+}
+
+.vent ul li{
+font-size: 18px;
+padding-top: 20px;
+
+}
+
+.vent ul li p{
+padding-top: -10px;
+}
+
+.desve ul li{
+font-size: 18px;
+padding-top: 9px;
+
+}
+
+.desventaja{
+display: flex;
+align-items: center;
+justify-content: center;
+width: 50%;
+color: #ffffff;
+background-color: rgb(148, 197, 245); /* #6383b5   */
+border-top-right-radius: 70px;
+border-bottom-right-radius: 70px;
+}
+
+.desventaja:hover{
+transform: scale(1.1);
+transition: 2s;
+
+}
+.desve{
+padding: 0 30px;
+}
+
+
+
+.container-form h3{
+    text-align: center;
+}
+
+
+
+/*Footer*/
+.final{
+max-width: 1200px;
+margin: 0 auto;
+
+}
+
+.footer{
+background-color: rgb(148, 197, 245);
+padding: 5px 0; /* Espaciado superior e inferior */
+
+}
+
+.footer-row{
+display: flex;
+}
+
+.footer-links{
+width: 30%;
+padding: 0 15px;
+
+}
+
+.footer-links h4{
+font-size: 20px;
+color: #ffffff;
+margin-bottom: 25px;
+font-weight: 500;
+border-bottom: 2px solid rgb(255, 255, 255); /* Línea inferior */
+padding-bottom: 10px;
+display: inline-block;
+}
+
+.footer-links ul li{
+font-size: 18px;
+text-decoration: none;
+color:#f8f9fa;
+display: block;
+margin-bottom: 15px;
+transition: all .3s ease;
+}
+
+.footer-links ul li:hover{
+color: #5c94a5;
+padding-left: 6px;
+}
+
+
+
+
+
+.footer-links a{
+color: #ffffff;
+}
+
+.footer-links  a:hover{
+color: rgb(102, 153, 204);
+}
+
+.footer-links img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.manual{
+    padding-top: 60px;
+    width: 100%;
+    height: 300px;
+    background-color:rgb(148, 197, 245);
+    margin-top: 50px;
+    }
+
+.manual h2{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding-top: 20px;
+    font-size: 40px;
+}
+
+.manual p{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.manual-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 30px;
+    margin-left: 550px;
+    background-color: #5c94a5;
+    color: rgb(255, 255, 255);
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.manual-btn:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+}
+
+
+/*Boton*/
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: rgb(148, 197, 245);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 24px;
+    box-shadow: 0 4px 8px rgb(255, 255, 255); /* Sombra */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background 0.3s; 
+    text-decoration: none; /* Para quitar el subrayado del enlace */
+}
+
+.scroll-to-top:hover {
+    background: rgb(148, 197, 245);
+}
+
+/* Alinear icono + texto en el footer */
+.footer-links ul li {
+    display: flex;
+    align-items: center;
+    gap: 8px;              /* Separación mínima entre imagen y texto */
+    margin-bottom: 6px;    /* Mucho menos espacio entre cada línea */
+}
+
+/* Ajusta tamaño de íconos y evita que se deformen */
+.footer-links ul li img {
+    width: 20px;
+    height: auto;
+    display: block;
+}
+
+/* Para que el texto quede alineado medio con la imagen */
+.footer-links ul li a {
+    display: inline-block;
+    line-height: 1.2;
+}
+
+
