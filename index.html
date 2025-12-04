@@ -1,0 +1,352 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Botellas a Filamento</title>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      background-color: #307fcf;
+      color: #37474f;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .app-bar {
+      background-color: #325c86;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-size: 1.3em;
+      font-weight: bold;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .app-title {
+      flex-grow: 1;
+      text-align: center;
+    }
+    .logout-button {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1em;
+      cursor: pointer;
+      padding: 10px;
+      margin-right: 10px;
+      opacity: 0.8;
+      transition: opacity 0.3s ease;
+    }
+    .logout-button:hover {
+      opacity: 1;
+    }
+    .container {
+      flex-grow: 1;
+      padding: 20px;
+      overflow-y: auto;
+    }
+    .section-title {
+      color: #193857;
+      border-bottom: 2px solid #b3e5fc;
+      padding-bottom: 10px;
+      margin-bottom: 25px;
+      font-size: 1.7em;
+      font-weight: 500;
+      text-align: center;
+    }
+    .info-card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+      padding: 20px;
+      margin-bottom: 20px;
+      border-left: 8px solid #03a9f4;
+    }
+    .info-card h3 {
+      color: #193857;
+      margin-top: 0;
+      margin-bottom: 15px;
+      font-size: 1.4em;
+      font-weight: 500;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #193857;
+      font-size: 1.1em;
+    }
+    .form-group input[type="number"],
+    .form-group select,
+    .form-group input[type="text"],
+    .form-group input[type="password"],
+    .form-group input[type="email"],
+    .form-group input[type="tel"] {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #b3e5fc;
+      border-radius: 8px;
+      box-sizing: border-box;
+      font-size: 1em;
+    }
+    .calculate-button, .login-button {
+      background-color: #193857;
+      color: white;
+      border: none;
+      padding: 15px 25px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1.1em;
+      width: 100%;
+      transition: background-color 0.3s ease;
+      margin-top: 15px;
+      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05);
+    }
+    .calculate-button:hover, .login-button:hover {
+      background-color: #112233;
+    }
+    #result {
+      margin-top: 25px;
+      padding: 20px;
+      background-color: #e0f7fa;
+      border: 1px solid #b2ebf2;
+      border-radius: 8px;
+      font-size: 1.1em;
+      color: #00897b;
+      text-align: center;
+    }
+    #result strong {
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+    .note {
+      font-size: 0.95em;
+      color: #78909c;
+      margin-top: 15px;
+      text-align: center;
+    }
+    .login-container {
+      flex-grow: 1;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f4c3;
+    }
+    .login-form {
+      width: 90%;
+      max-width: 400px;
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .login-container h1 {
+      color: #193857;
+      margin-bottom: 25px;
+      text-align: center;
+      font-weight: 500;
+      font-size: 1.8em;
+    }
+    .hidden { display: none; }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="app-bar">
+    <button class="logout-button" onclick="logout()">Cerrar Sesión</button>
+    <h1 class="app-title">Botellas a Filamento</h1>
+  </div>
+
+  <div class="container" id="mainContent">
+    <h1 class="section-title">Calcula tu Filamento</h1>
+
+    <div class="info-card">
+      <h3>Ingresa la cantidad de botellas</h3>
+      <div class="form-group">
+        <label for="bottleCount">Número de botellas:</label>
+        <input type="number" id="bottleCount" min="1" value="1">
+      </div>
+
+      <h3>Selecciona el tamaño de la botella</h3>
+      <div class="form-group">
+        <label for="bottleSize">Tamaño:</label>
+        <select id="bottleSize">
+          <option value="500ml">500 ml</option>
+          <option value="1000ml">1 Litro</option>
+          <option value="1500ml">1.5 Litros</option>
+        </select>
+      </div>
+
+      <button class="calculate-button" onclick="calcularFilamento()">Calcular Estimación</button>
+
+      <div id="result" style="display: none;">
+        <strong>Estimación de filamento:</strong><br>
+        <span id="filamentAmount"></span><br>
+        <span id="filamentMeters"></span>
+      </div>
+
+      <p class="note">Los resultados son aproximados y pueden variar.</p>
+    </div>
+  </div>
+
+  <!-- LOGIN -->
+  <div class="login-container" id="loginSection">
+    <h1>Bienvenido</h1>
+    <form class="login-form" id="loginForm">
+      <div class="form-group">
+        <label for="username">Usuario (E-mail):</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <button type="submit" class="login-button">Iniciar Sesión</button>
+    </form>
+    <p style="margin-top:10px;">¿No tenés cuenta? <a href="#" onclick="showRegister()">Registrate</a></p>
+  </div>
+
+  <!-- REGISTRO -->
+  <div class="login-container hidden" id="registerSection">
+    <h1>Registrarse</h1>
+    <form class="login-form" id="registerForm">
+      <div class="form-group">
+        <label for="firstName">Nombre:</label>
+        <input type="text" id="firstName" name="firstName" required>
+      </div>
+      <div class="form-group">
+        <label for="lastName">Apellido:</label>
+        <input type="text" id="lastName" name="lastName" required>
+      </div>
+      <div class="form-group">
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Teléfono:</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="city">Ciudad:</label>
+        <input type="text" id="city" name="city" required>
+      </div>
+      <div class="form-group">
+        <label for="regPassword">Contraseña:</label>
+        <input type="password" id="regPassword" name="regPassword" required>
+      </div>
+      <button type="submit" class="login-button">Crear Cuenta</button>
+    </form>
+    <p style="margin-top:10px;">¿Ya tenés cuenta? <a href="#" onclick="showLogin()">Iniciar Sesión</a></p>
+  </div>
+
+  <script>
+    const loginSection = document.getElementById('loginSection');
+    const mainContent = document.getElementById('mainContent');
+    const loginForm = document.getElementById('loginForm');
+    const registerSection = document.getElementById('registerSection');
+    const registerForm = document.getElementById('registerForm');
+
+    document.addEventListener('DOMContentLoaded', function () {
+      loginSection.classList.remove('hidden');
+      mainContent.classList.add('hidden');
+    });
+
+    // REGISTRO
+    function showRegister() {
+      loginSection.classList.add('hidden');
+      registerSection.classList.remove('hidden');
+    }
+
+    function showLogin() {
+      registerSection.classList.add('hidden');
+      loginSection.classList.remove('hidden');
+    }
+
+    registerForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+      const userData = {
+        firstName: document.getElementById('firstName').value,
+        lastName: document.getElementById('lastName').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        city: document.getElementById('city').value,
+        password: document.getElementById('regPassword').value
+      };
+      localStorage.setItem('userData', JSON.stringify(userData));
+      alert('Registro exitoso. Ahora podés iniciar sesión.');
+      showLogin();
+    });
+
+    // LOGIN
+    loginForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+      const userData = JSON.parse(localStorage.getItem('userData'));
+      if (!userData) {
+        alert('No hay usuario registrado. Registrate primero.');
+        return;
+      }
+
+      const enteredUser = document.getElementById('username').value;
+      const enteredPassword = document.getElementById('password').value;
+
+      if (enteredUser === userData.email && enteredPassword === userData.password) {
+        loginSection.classList.add('hidden');
+        mainContent.classList.remove('hidden');
+      } else {
+        alert('Usuario o contraseña incorrectos.');
+      }
+    });
+
+    function calcularFilamento() {
+      const bottleCount = parseInt(document.getElementById('bottleCount').value);
+      const bottleSize = document.getElementById('bottleSize').value;
+      const resultDiv = document.getElementById('result');
+      const filamentSpan = document.getElementById('filamentAmount');
+      const metersSpan = document.getElementById('filamentMeters');
+
+      let minFilament = 0;
+      let maxFilament = 0;
+
+      if (bottleSize === '500ml') {
+        minFilament = 25;
+        maxFilament = 50;
+      } else if (bottleSize === '1000ml') {
+        minFilament = 50;
+        maxFilament = 100;
+      } else if (bottleSize === '1500ml') {
+        minFilament = 75;
+        maxFilament = 150;
+      }
+
+      const estimatedMin = bottleCount * minFilament;
+      const estimatedMax = bottleCount * maxFilament;
+
+      const gramsPerMeter = 2.85;
+      const minMeters = (estimatedMin / gramsPerMeter).toFixed(1);
+      const maxMeters = (estimatedMax / gramsPerMeter).toFixed(1);
+
+      filamentSpan.textContent = `${estimatedMin} - ${estimatedMax} gramos`;
+      metersSpan.textContent = `Equivale a aproximadamente ${minMeters} - ${maxMeters} metros de filamento`;
+
+      resultDiv.style.display = 'block';
+    }
+
+    function logout() {
+      loginSection.classList.remove('hidden');
+      mainContent.classList.add('hidden');
+      document.getElementById('loginForm').reset();
+    }
+  </script>
+</body>
+</html>

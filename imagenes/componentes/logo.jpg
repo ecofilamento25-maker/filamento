@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/03a89292db.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="preca.css" >
+   <title>Filamento</title>
+</head>
+<body>
+
+
+    <header class="header">
+        <div class="menu container">
+            <a href="#" class="logo">Logo</a>
+       
+            <nav class="navbar">
+                <ul>
+                    <li><a href="inicio.html">Inicio</a></li>
+                    <li><a href="Materialess.html">Materiales</a></li>
+                    <li><a href="Precauciones.html">Precauciones</a></li>
+                    <li><a href="preguntas.php">Preguntas frecuentes</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-content container">
+            <h1 class="desplazamiento">Proyecto Filamento</h1>
+            <p>
+                Cuando se utiliza un producto, es fundamental prestar atención a ciertas precauciones 
+                que aseguran no solo la seguridad del usuario, sino también la integridad del dispositivo 
+                en cuestión. Adoptar un enfoque preventivo puede prevenir accidentes y malfuncionamientos.
+            </p>
+        </div>
+    </header>
+    
+
+
+        <div class="container">
+            <h2><a href="#" class="underline">Precauciones del Usuario</a></h2>
+                <p></p>
+            <section id="usuario" class="section">
+                
+                <div class="precaution-card">
+                    <h3>Precauciones en el Extrusor</h3>
+                    <p>Evita quemaduras al tocar la boca del extrusor; no lo hagas, cuídate siempre.</p>
+                </div>
+                <div class="precaution-card">
+                    <h3>Cuidado con la Energía</h3>
+                    <p> Ten cuidado con la fuente de energía y no la toques si no es necesario, desconecta.</p>
+                </div>
+                <div class="precaution-card">
+                    <h3>Bebidas y Seguridad</h3>
+                    <p>NNo tengas bebidas cerca de la fuente de energía; evita daños, mantén la zona limpia. </p>
+                </div>
+                <div class="precaution-card">
+                    <h3>Uso Seguro de Electrónica</h3>
+                    <p>Es crucial saber usar equipos electrónicos; la seguridad es lo más importante, aprende bien.                    </p>
+                </div>
+                <div class="precaution-card">
+                    <h3>Pelo y Seguridad en Maquinaria</h3>
+                    <p>Atarse el pelo es fundamental al trabajar con motores; evita que quede atrapado y previene.</p>
+                </div>
+                <div class="precaution-card">
+                    <h3>Riesgo con la Hoja del Cúter</h3>
+                    <p>La hoja del cúter es afilada y puede causar cortes si no se maneja con gran cuidado.</p>
+                </div>
+            </section>
+    
+
+            <h2><a href="#" class="underline">Precauciones del Dispositivo</a></h2>
+
+            <section id="dispositivo" class="section">
+                
+                <div class="precaution-card">
+                    <h3>Revisar que la fuente no tenga mal contacto</h3>
+                    <p> Es clave verificar que la fuente esté bien conectada y no tenga fallas en su unión.</p>
+                </div>
+                <div class="precaution-card">
+                    <h3>Asegurarse de que el filamento esté bien fijo</h3>
+                    <p>Para evitar atasco de filamento, es clave que el filamento esté bien sujeto en la boca del extrusor.</p>
+                </div>
+                <div class="precaution-card">
+                    <h3>Evitar forzar los piezas del dispositivo</h3>
+                    <p> Se aconseja no aplicar fuerza excesiva a los piezas, ya que esto puede causar fallos en el sistema.</p>
+                </div>
+            </section>
+        </div>
+
+        
+
+
+    <a href="#" class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-arrow-up"></i> <!-- Icono de flecha hacia arriba -->
+    </a>
+    
+    <script>
+ 
+    document.getElementById('scrollToTop').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevenir el comportamiento por defecto del enlace
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // Para un desplazamiento suave
+        });
+    });
+
+
+ </script>    
+  
+<br></br>
+  <footer class="footer">
+    <div class="final">
+        <div class="footer-row">
+            <div class="footer-links"> <!---->
+           
+             
+                <ul>
+                    <a href="https://www.tecnica3hurlingham.com/" target="_blank">
+                
+                        <li> <img src="imagess/logo.jpg" width="160" ></li>
+                </a>
+                </ul> 
+            </div>
+           
+      
+            <div class="footer-links">
+                 <h4>Integrantes : 7°B </h4>
+                <ul>
+                      <li>Antonella Budiño</li>
+                    <li>Lucía Escalante</li>
+                    <li>Sara Garnica</li>
+                    <li>Jazmine Tejerina</li>
+                    <li>Marcia Peñaloza</li>
+                    <li>Evelyn Acuña</li>
+                  
+                    
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>¿De donde somos?</h4>
+                <ul>
+                    <li><a href="https://www.google.com/maps/dir//Jos%C3%A9+de+Andonaegui+2295,+B1686+Hurlingham,+Provincia+de+Buenos+Aires/@-34.5968573,-58.7378425,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x95bcbf869a31fa01:0x195fa44f967e33dc!2m2!1d-58.6555102!2d-34.5969422?entry=ttu" target="_blank">Técnica 3 Víctor Mercate</a></li>
+                    <li>Argentina, Buenos Aires</li>
+                    <li> Hurligham</li>
+
+                </ul>
+            </div>
+
+            
+
+           
+        
+    </div>
+
+</footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+</body>
+</html>

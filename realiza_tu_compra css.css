@@ -1,0 +1,164 @@
+/* General - Estilos globales */
+body {
+    margin: 0; /* Elimina el margen por defecto del navegador */
+    font-family: 'Segoe UI', Tahoma, sans-serif; /* Fuente legible y moderna */
+    background-image: url("imagenes/fondo 4.jpg"); /* Imagen de fondo */
+    background-repeat: no-repeat; /* Evita que se repita la imagen */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+    background-position: center center; /* Centra la imagen */
+    background-attachment: fixed; /* Fija la imagen al fondo */
+}
+
+/* NAV - Menú de navegación */
+nav {
+    background-color: rgb(148, 197, 245);  /* Fondo semitransparente */
+    padding: 15px; /* Espaciado interno */
+    display: flex;
+    gap: 30px; /* Espacio entre los elementos del menú */
+    list-style: none; /* Elimina los puntos de lista */
+    justify-content: center; /* Centra los elementos */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav li {
+    list-style: none; /* Elimina puntos de la lista */
+}
+
+nav a {
+    color: white; /* Texto blanco */
+    text-decoration: none; /* Elimina el subrayado */
+    font-weight: bold; /* Texto en negrita */
+    padding: 8px 15px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: rgb(148, 197, 245);  /* Fondo al pasar el mouse */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Main - Bloque principal del formulario */
+.bloque {
+    background-color: rgb(148, 197, 245); /* Fondo blanco semitransparente */
+    max-width: 600px;
+    margin: 40px auto; /* Centrado con márgenes */
+    padding: 30px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 15px rgb(148, 197, 245);  /* Sombra suave */
+    color: #ffffff;
+}
+
+/* Formulario - Estilos del formulario de compra */
+.formulario-compra h2 {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.formulario-compra input,
+.formulario-compra textarea,
+.formulario-compra select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #fffbfb;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.formulario-compra textarea {
+    resize: vertical; /* Permite redimensionar solo verticalmente */
+}
+
+.formulario-compra button {
+    background-color: #0056b3;  /* Azul */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.formulario-compra button:hover {
+    background-color: #0056b3; /* Azul más oscuro al pasar el mouse */
+}
+
+/* Scroll-to-top - Botón flotante para volver arriba */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgb(148, 197, 245);
+    color: white;
+    font-size: 20px;
+    padding: 12px 14px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+    z-index: 200;
+}
+
+.scroll-to-top:hover {
+    background-color: rgb(148, 197, 245);
+}
+
+/* Footer - Pie de página */
+.footer {
+    background-color: rgb(148, 197, 245);
+    color: white;
+    padding: 30px 20px;
+    font-size: 14px;
+}
+
+.footer .footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-links {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-links h4 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.footer-links img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
