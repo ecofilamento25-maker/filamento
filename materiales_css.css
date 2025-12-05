@@ -269,10 +269,8 @@ text-align: center;
   margin: 0;
 }
 .footer-links ul li:hover{                                                                                                                                                              ul li {
-  margin: 6px 0; /* controla la separación entre líneas */
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  color: rgb(255, 255, 255); 
+    padding-left: 6px
 
 }
 
@@ -315,5 +313,6 @@ text-align: center;
 .scroll-to-top:hover {
     background: rgb(255, 255, 255);
 }
+
 
 
