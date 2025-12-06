@@ -267,7 +267,7 @@ text-align: center;
 
 .footer-links ul li:hover{
     color: rgb(255, 255, 255); 
-    padding-left: 6px;
+    padding-left: 2px;
     font-size: 18px;
     text-decoration: none;
      color:#f8f9fa;
@@ -323,6 +323,7 @@ text-align: center;
   align-items: center; /* alinea icono + texto */
   gap: 8px; /* espacio entre icono y texto */
 }
+
 
 
 
