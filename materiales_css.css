@@ -317,6 +317,15 @@ text-align: center;
     background: rgb(255, 255, 255);
 }
 
+.item {
+  margin: 5px 0; /* reduce la separación vertical */
+  display: flex;
+  align-items: center; /* alinea icono + texto */
+  gap: 8px; /* espacio entre icono y texto */
+}
+
+
+
 
 
 
