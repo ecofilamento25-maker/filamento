@@ -264,18 +264,16 @@ text-align: center;
     display: inline-block;
 }
 
-.footer-links li{
+
+.footer-links ul li:hover{
+    color: rgb(255, 255, 255); 
+    padding-left: 6px;
     font-size: 18px;
     text-decoration: none;
      color:#f8f9fa;
     display: block;
     margin-bottom: 15px;
     transition: all .3s ease;
-}
-
-.footer-links ul li:hover{
-    color: rgb(255, 255, 255); 
-    padding-left: 6px;
 
 }
 
@@ -318,6 +316,7 @@ text-align: center;
 .scroll-to-top:hover {
     background: rgb(255, 255, 255);
 }
+
 
 
 
