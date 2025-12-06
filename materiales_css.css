@@ -264,7 +264,7 @@ text-align: center;
     display: inline-block;
 }
 
-.footer-links ul li{
+.footer-links li{
     font-size: 18px;
     text-decoration: none;
      color:#f8f9fa;
@@ -318,6 +318,7 @@ text-align: center;
 .scroll-to-top:hover {
     background: rgb(255, 255, 255);
 }
+
 
 
 
