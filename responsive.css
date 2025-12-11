@@ -1,0 +1,194 @@
+/* ----------------------------------------------------
+   AJUSTES GENERALES PARA MOVIL
+---------------------------------------------------- */
+
+@media (max-width: 768px) {
+
+    /* Evita desbordes horizontales */
+    * {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    body {
+        padding: 0;
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .container {
+        width: 90%;
+        margin: auto;
+    }
+
+    /* ----------------------------------------------------
+       HEADER + MENÚ
+    ---------------------------------------------------- */
+    .header {
+        padding: 10px 0;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100% !important;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+    }
+
+    /* Oculta menú normal (el JS lo reusa) */
+    .navbar ul {
+        width: 100%;
+        text-align: center;
+        background: #111;
+        padding: 25px 0;
+        gap: 1.3rem;
+    }
+
+    .navbar ul li a {
+        color: white !important;
+        font-size: 1.1rem;
+        padding: 10px 0;
+        display: block;
+    }
+
+    /* ----------------------------------------------------
+       HEADER CONTENT
+    ---------------------------------------------------- */
+    .header-content {
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .header-content h1 {
+        font-size: 1.9rem;
+    }
+
+    .header-content p {
+        font-size: 1rem;
+    }
+
+    /* ----------------------------------------------------
+       TEXTO Y SECCIONES
+    ---------------------------------------------------- */
+    h2, h3 {
+        text-align: center;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .section {
+        padding: 10px;
+    }
+
+    /* ----------------------------------------------------
+       CARDS (Funcionamiento)
+    ---------------------------------------------------- */
+    .card {
+        padding: 15px;
+        background: #f3f3f3;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        font-size: 0.95rem;
+    }
+
+    /* ----------------------------------------------------
+       MANUAL DE USUARIO
+    ---------------------------------------------------- */
+    .manual {
+        text-align: center;
+        padding: 25px 10px;
+    }
+
+    .manual-btn {
+        padding: 12px 20px;
+        font-size: 1rem;
+        display: inline-block;
+    }
+
+    /* ----------------------------------------------------
+       VENTAJAS / DESVENTAJAS
+    ---------------------------------------------------- */
+    .container-form {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        padding: 0 10px;
+    }
+
+    .vent, .desve {
+        padding: 15px;
+        font-size: 0.95rem;
+        background: #f3f3f3;
+        border-radius: 8px;
+    }
+
+    .vent > h3, .desve > h3 {
+        text-align: center;
+    }
+
+    /* ----------------------------------------------------
+       BOTÓN SCROLL TO TOP
+    ---------------------------------------------------- */
+    .scroll-to-top {
+        width: 45px;
+        height: 45px;
+        bottom: 18px;
+        right: 18px;
+        font-size: 1.4rem;
+    }
+
+    /* ----------------------------------------------------
+       FOOTER
+    ---------------------------------------------------- */
+    .footer-row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        text-align: center;
+    }
+
+    .footer-links ul li {
+        margin-bottom: 8px;
+    }
+
+    .footer-links img {
+        width: 130px !important;
+    }
+
+    .footer-links h4 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .footer-links a {
+        font-size: 1rem;
+    }
+}
+
+
+/* ----------------------------------------------------
+   TELÉFONOS MUY PEQUEÑOS (≤ 480px)
+---------------------------------------------------- */
+@media (max-width: 480px) {
+
+    .header-content h1 {
+        font-size: 1.6rem;
+    }
+
+    .manual-btn {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+
+    .footer-links img {
+        width: 110px !important;
+    }
+}
