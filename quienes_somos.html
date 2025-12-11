@@ -220,7 +220,53 @@
 
 </footer>
 
+    <!-- MENÚ HAMBURGUESA -->
+<style>
+.hamburger { display:none; background:none; border:none; font-size:2rem; cursor:pointer; color:white; }
+
+@media (max-width: 768px) {
+    .hamburger { display:block; z-index:1001; }
+
+    .navbar ul {
+        position:absolute;
+        top:70px;
+        right:0;
+        width:100%;
+        background:#111;
+        display:none;
+        flex-direction:column;
+        padding:20px 0;
+        gap:1.2rem;
+        text-align:center;
+        z-index:1000;
+    }
+    .navbar ul.active { display:flex; }
+}
+</style>
+
+<script>
+// Crear botón hamburguesa
+const menuContainer = document.querySelector(".menu");
+const button = document.createElement("button");
+button.className = "hamburger";
+button.id = "hamburger";
+button.setAttribute("aria-label", "Abrir menú");
+button.innerHTML = '<i class="fas fa-bars"></i>';
+menuContainer.prepend(button);
+
+// Función menú móvil
+document.getElementById("hamburger").addEventListener("click", function () {
+    const nav = document.querySelector(".navbar ul");
+    nav.classList.toggle("active");
+
+    this.innerHTML = nav.classList.contains("active")
+        ? '<i class="fas fa-times"></i>'
+        : '<i class="fas fa-bars"></i>';
+});
+</script>
+
 </body>
+
 
 
 
